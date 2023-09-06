@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import { isVisible } from "@testing-library/user-event/dist/utils";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -49,20 +52,32 @@ export const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} xl={7} md={6}>
-            <span className="tagline">Добро пожаловать в мое Портфолио!</span>
-            <h1>
-              {`Привет, я `}
-              <span className="wrap">{text}</span>
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur quas nihil veritatis vero hic neque, suscipit
-              quibusdam officia ex quos non dolore ducimus accusantium esse
-              assumenda molestias minima dolorem beatae!
-            </p>
-            <button onClick={() => console.log("connect")}>
-              Связаться <ArrowRightCircle size={25} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <span className="tagline">
+                    Добро пожаловать в мое Портфолио!
+                  </span>
+                  <h1>
+                    {`Привет, я `}
+                    <span className="wrap">{text}</span>
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur quas nihil veritatis vero hic neque, suscipit
+                    quibusdam officia ex quos non dolore ducimus accusantium
+                    esse assumenda molestias minima dolorem beatae!
+                  </p>
+                  <button onClick={() => console.log("connect")}>
+                    Связаться <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col xs={12} xl={5} md={6}>
             <img src={headerImg} alt="Header Img" />

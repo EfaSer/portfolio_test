@@ -87,7 +87,7 @@ export const Contact = () => {
                                         placeholder="Email"
                                         onChange={(e) =>
                                             onFormUpdate(
-                                                "Email",
+                                                "email",
                                                 e.target.value
                                             )
                                         }

@@ -67,13 +67,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://t.me/sirigoha">
+              <a href="https://t.me/sirigoha" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="https://vk.com/efanov.serg">
+              <a href="https://vk.com/efanov.serg" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon2} alt="" />
               </a>
-              <a href="https://github.com/EfaSer">
+              <a href="https://github.com/EfaSer" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon3} alt="" />
               </a>
             </div>

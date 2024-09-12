@@ -93,6 +93,10 @@ p.danger {
   color: red;
 }
 
+.App {
+  scroll-behavior: smooth;
+}
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;

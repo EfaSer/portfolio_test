@@ -1,14 +1,13 @@
 import Carousel from "react-multi-carousel";
 import { Col, Container, Row } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
-import skill1 from "../assets/img/html-img.svg";
-import skill2 from "../assets/img/css-img.svg";
-import skill3 from "../assets/img/js-img.svg";
-import skill4 from "../assets/img/python-img.svg";
-import skill5 from "../assets/img/django-img.svg";
-import skill6 from "../assets/img/react-img.svg";
-import skill7 from "../assets/img/api-img.svg";
-import skill8 from "../assets/img/docker-img1.svg";
+import html from "../assets/img/html-img.svg";
+import css from "../assets/img/css-img.svg";
+import js from "../assets/img/js-img.svg";
+import python from "../assets/img/python-img.svg";
+import django from "../assets/img/django-img.svg";
+import react from "../assets/img/react-img.svg";
+import api from "../assets/img/api-img.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -49,36 +48,32 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={skill1} alt="Image" />
+                  <img src={html} alt="html" />
                   <h5>HTML</h5>
                 </div>
                 <div className="item">
-                  <img src={skill2} alt="Image" />
+                  <img src={css} alt="css" />
                   <h5>CSS</h5>
                 </div>
                 <div className="item">
-                  <img src={skill3} alt="Image" />
+                  <img src={js} alt="js" />
                   <h5>JS</h5>
                 </div>
                 <div className="item">
-                  <img src={skill4} alt="Image" />
+                  <img src={python} alt="python" />
                   <h5>Python</h5>
                 </div>
                 <div className="item">
-                  <img src={skill5} alt="Image" />
+                  <img src={django} alt="django" />
                   <h5>Django</h5>
                 </div>
                 <div className="item">
-                  <img src={skill6} alt="Image" />
+                  <img src={react} alt="react" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={skill7} alt="Image" />
+                  <img src={api} alt="api" />
                   <h5>API</h5>
-                </div>
-                <div className="item">
-                  <img src={skill8} alt="Image" />
-                  <h5>Docker</h5>
                 </div>
               </Carousel>
             </div>

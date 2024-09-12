@@ -11,8 +11,8 @@ export const Contact = () => {
         message: "",
     };
     const [formDetails, setFormDetails] = useState(formInitialDetails);
-    const [buttonText, setButtonText] = useState("Send");
-    const [status, setStatus] = useState({});
+    const [buttonText, setButtonText] = useState("Отправить");
+    // const [status, setStatus] = useState({});
 
     const onFormUpdate = (category, value) => {
         setFormDetails({
@@ -20,45 +20,54 @@ export const Contact = () => {
             [category]: value,
         });
     };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setButtonText("Sending...");
-        let response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),
-        });
-        setButtonText("Send");
-        let result = response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-            setStatus({ success: true, message: "Message sent successfully" });
-        } else {
-            setStatus({
-                success: false,
-                message: "Something went wrong, please try again later",
-            });
-        }
-    };
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setButtonText("Sending...");
+    //     let response = await fetch("http://localhost:5000/contact", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "Application/json;charset=utf-8",
+    //         },
+    //         body: JSON.stringify(formDetails),
+    //     });
+    //     setButtonText("Send");
+    //     let result = response.json();
+    //     setFormDetails(formInitialDetails);
+    //     if (result.code === 200) {
+    //         setStatus({ success: true, message: "Message sent successfully" });
+    //     } else {
+    //         setStatus({
+    //             success: false,
+    //             message: "Something went wrong, please try again later",
+    //         });
+    //     }
+    // };
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    
+        setButtonText('Отправляется...')
+        setTimeout(() => { setButtonText('Отправить') }, 2000);
+
+        
+    }
 
     return (
         <section className="contact" id="connect">
             <Container>
                 <Row className="align-items-center">
                     <Col md={6}>
-                        <img src={contactImg} />
+                        <img src={contactImg} alt="contact"/>
                     </Col>
                     <Col md={6}>
                         <h2>Связаться</h2>
-                        <form onSubmit={handleSubmit}>
+                        <form>
                             <Row>
                                 <Col sm={6} className="px-1">
                                     <input
                                         type="text"
                                         value={formDetails.firstName}
-                                        placeholder="First Name"
+                                        placeholder="Имя"
                                         onChange={(e) =>
                                             onFormUpdate(
                                                 "firstName",
@@ -71,7 +80,7 @@ export const Contact = () => {
                                     <input
                                         type="text"
                                         value={formDetails.lastName}
-                                        placeholder="Last Name"
+                                        placeholder="Фамилия"
                                         onChange={(e) =>
                                             onFormUpdate(
                                                 "lastName",
@@ -97,7 +106,7 @@ export const Contact = () => {
                                     <input
                                         type="tel"
                                         value={formDetails.phone}
-                                        placeholder="Phone Number"
+                                        placeholder="Телефон"
                                         onChange={(e) =>
                                             onFormUpdate(
                                                 "phone",
@@ -110,7 +119,7 @@ export const Contact = () => {
                                     <textarea
                                         rows="6"
                                         value={formDetails.message}
-                                        placeholder="Message"
+                                        placeholder="Сообщение"
                                         onChange={(e) =>
                                             onFormUpdate(
                                                 "message",
@@ -118,14 +127,14 @@ export const Contact = () => {
                                             )
                                         }
                                     ></textarea>
-                                    <button type="submit">
+                                    <button type="button" onClick={(e) => handleSubmit(e)}>
                                         <span>{buttonText}</span>
                                     </button>
                                 </Col>
                             </Row>
                         </form>
                     </Col>
-                    {status.message && (
+                    {/* {status.message && (
                         <Col>
                             <p
                                 className={
@@ -137,7 +146,7 @@ export const Contact = () => {
                                 {status.message}
                             </p>
                         </Col>
-                    )}
+                    )} */}
                 </Row>
             </Container>
         </section>

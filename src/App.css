@@ -396,12 +396,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
-  border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  /* border-radius: 50px; */
+  /* background-color: rgb(255 255 255 / 10%); */
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33%;
+
 }
 .project .nav.nav-pills .nav-link {
   background-color: #182754;
@@ -432,12 +433,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
-.project .nav.nav-pills .nav-link.active {
+/* .project .nav.nav-pills .nav-link.active {
   border: 1px solid rgba(255, 255, 255, 1);
-}
+} */
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
+  overflow: hidden;
 }
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -449,6 +451,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
+  overflow: hidden;
+}
+.nav-link#projects-tabs-tab-four {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 0 50px;
+  overflow: hidden;
+}
+.nav-link#projects-tabs-tab-five {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 50px 0;
+  overflow: hidden;
 }
 .proj-imgbx {
   position: relative;

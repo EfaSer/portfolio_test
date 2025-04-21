@@ -6,9 +6,9 @@ import proj1Img3 from "../assets/img/project1-img3.jpg";
 import proj2Img1 from "../assets/img/project2-img1.png";
 import proj2Img2 from "../assets/img/project2-img2.png";
 import proj2Img3 from "../assets/img/project2-img3.png";
-import proj3Img1 from "../assets/img/project3-img1.png";
-import proj3Img2 from "../assets/img/project3-img2.png";
-import proj3Img3 from "../assets/img/project3-img3.png";
+import proj3Img1 from "../assets/img/project3-img1.jpg";
+import proj3Img2 from "../assets/img/project3-img2.jpg";
+import proj3Img3 from "../assets/img/project3-img3.jpg";
 import proLad1 from "../assets/img/it-lad.png";
 import proLad2 from "../assets/img/it-lad-stack.png";
 import proLad3 from "../assets/img/it-lad-projects.png";
@@ -62,23 +62,23 @@ export const Projects = () => {
     ],
     [
       {
-        title: "Brainstorm",
-        description: "Разработка сайта",
+        title: "РУТС",
+        description: "Участие в разработке сайта",
         imgUrl: proj3Img1,
-        urlProject: "https://sergey-efanov.github.io/ru/",
+        urlProject: "https://new.ruts.run/",
       },
       {
-        title: "Brainstorm",
-        description: "Разработка сайта",
+        title: "РУТС",
+        description: "Участие в разработке сайта",
         imgUrl: proj3Img2,
-        urlProject: "https://sergey-efanov.github.io/ru/",
+        urlProject: "https://new.ruts.run/",
       },
       {
-        title: "Brainstorm",
-        description: "Разработка сайта",
+        title: "РУТС",
+        description: "Участие в разработке сайта",
         imgUrl: proj3Img3,
-        urlProject: "https://sergey-efanov.github.io/ru/",
-      }
+        urlProject: "https://new.ruts.run/",
+      },
     ],
     [
       {
@@ -135,7 +135,8 @@ export const Projects = () => {
                 >
                   <h2>Projects</h2>
                   <p>
-                    В данном разделе вы можете ознакомиться с несколькими моими работами. 
+                    В данном разделе вы можете ознакомиться с несколькими моими
+                    работами.
                   </p>
                 </div>
               )}
@@ -153,7 +154,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">Travel.</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Brainstorm</Nav.Link>
+                  <Nav.Link eventKey="third">РУТС</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="four">IT-АКАДЕМИЯ Lad</Nav.Link>

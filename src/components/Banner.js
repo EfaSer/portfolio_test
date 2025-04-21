@@ -5,7 +5,6 @@ import bannerImg from "../assets/img/banner-img.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
-
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -74,9 +73,9 @@ export const Banner = () => {
                     взаимодействовать с ними. Готов развиваться и расширять свои
                     навыки веб-разработки.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <a className="button" href="#connect">
                     Связаться <ArrowRightCircle size={25} />
-                  </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>

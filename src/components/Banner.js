@@ -4,7 +4,6 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import bannerImg from "../assets/img/banner-img.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { isVisible } from "@testing-library/user-event/dist/utils";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -59,7 +58,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcom to my portfolio!</span>
+                  <span className="tagline">Welcome to my portfolio!</span>
                   <h1>
                     {`Привет, я `}
                     <span className="wrap">{text}</span>
@@ -73,9 +72,9 @@ export const Banner = () => {
                     углубляю знания и стремлюсь к профессиональному росту в
                     веб-разработке.
                   </p>
-                  <button onClick={() => console.log("connect")}>
+                  <a className="button" href="#connect">
                     Связаться <ArrowRightCircle size={25} />
-                  </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
